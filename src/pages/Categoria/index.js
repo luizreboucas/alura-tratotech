@@ -5,14 +5,12 @@ import styles from './Categoria.module.scss'
 import Item from 'components/Item'
 export default function Categoria(){
     const {nomeCategoria} = useParams()
+    
     const { categoria, itens } = useSelector(state => {
+        const regex = new RegExp(state.busca, 'i')
         return {
             categoria: state.categorias.find((categoria)=> categoria.id === nomeCategoria),
-            itens: state.itens.filter((item)=>{
-                return(
-                    item.categoria === nomeCategoria
-                )
-            })
+            itens: state.itens.filter((item)=> item.categoria === nomeCategoria && item.titulo.match(regex))
         }
         
     })
