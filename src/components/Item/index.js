@@ -22,7 +22,7 @@ const quantidadeProps = {
 
 export default function Item({titulo, descricao,favorito,foto,preco,id, carrinho,quantidade}){
     const dispatch = useDispatch()
-    const itensTotal = useSelector(state => state.itens)
+    
     function imprime (){
         dispatch(mudarFavorito(id))
         
