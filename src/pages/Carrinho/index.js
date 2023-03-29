@@ -1,5 +1,4 @@
 import Header from 'components/Header'
-import carrinho from 'store/reducers/carrinho'
 import styles from './Carrinho.module.scss'
 import { useSelector } from 'react-redux'
 import Item from 'components/Item'

@@ -1,4 +1,4 @@
-import PaginaPadrao from 'components/PaginaPadrao';
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Router from 'routes.js';
